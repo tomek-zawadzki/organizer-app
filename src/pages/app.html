@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Organizer</title>
+
+    <script
+      src="https://kit.fontawesome.com/aee95fd16a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="/src/js/app.js"></script>
+    <link rel="stylesheet" href="/src/css/app.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="quotes">
+        <h1 class="quotes__text">
+          Olać to. Olać to. Olać to. Olać to. Olać to. Olać to. Olać to. Olać
+          to. Olać to. Olać to. Olać to.
+        </h1>
+        <p class="quotes__author">Tomasz Zawadzki</p>
+        <button class="quotes__change-btn">Change Quote</button>
+      </section>
+
+      <section class="menu">
+        <h2 class="menu title">Menu:</h2>
+        <ul class="menu__list">
+          <li class="menu__list--item">
+            <i class="fa-solid fa-list-check"></i> Tasks
+          </li>
+          <li class="menu__list--item">
+            <i class="fa-regular fa-note-sticky"></i> Notes
+          </li>
+          <li class="menu__list--item">
+            <i class="fa-solid fa-wallet"></i> Wallet
+          </li>
+          <li class="menu__list--item">
+            <i class="fa-solid fa-calendar-days"></i> Calendar
+          </li>
+        </ul>
+      </section>
+
+      <section class="tasks">
+        <h2 class="tasks__title">Tasks</h2>
+        <input type="text" class="tasks__input" placeholder="enter new task" />
+        <button class="tasks__add-btn">Add +</button>
+
+        <div class="tasks__new-task">
+          do something with yourself
+          <button class="tasks__new-task--accept-btn">
+            <i class="fa-solid fa-check"></i>
+          </button>
+          <button class="tasks__new-task--trash-btn">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+        <div class="tasks__new-task">
+          buy something for me
+          <button class="tasks__new-task--accept-btn">
+            <i class="fa-solid fa-check"></i>
+          </button>
+          <button class="tasks__new-task--trash-btn">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+        <div class="tasks__new-task">
+          go away
+          <button class="tasks__new-task--accept-btn">
+            <i class="fa-solid fa-check"></i>
+          </button>
+          <button class="tasks__new-task--trash-btn">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="notes">
+        <h2 class="notes__title">Notes</h2>
+        <form action="" class="notes__form">
+          <input type="text" placeholder="note title" />
+          <textarea
+            class="form__textarea"
+            name="textarea"
+            id="textarea"
+            cols="30"
+            rows="10"
+            placeholder="write your note"
+          ></textarea>
+          <button class="notes__accept-btn">Add note</button>
+        </form>
+        <div class="notes__new-note">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
+          corporis doloribus animi nulla quo dolores aperiam ducimus nostrum
+          similique ex, magnam nihil at autem dignissimos beatae aliquam amet
+          veniam nesciunt?
+          <button class="note__new-note--trash-btn">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+          <button class="note__new-note--xmark-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="notes__new-note">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
+          corporis doloribus animi nulla quo dolores aperiam ducimus nostrum
+          similique
+          <button class="note__new-note--trash-btn">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+          <button class="note__new-note--xmark-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="notes__new-note">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
+          corporis doloribus animi nulla quo dolores aperiam ducimus nostrum
+          similique ex, magnam nihil at autem dignissimos beatae
+          <button class="note__new-note--trash-btn">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+          <button class="note__new-note--xmark-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="wallet">
+        <h2 class="wallet__title">Your expenses</h2>
+      </section>
+
+      <section class="calendar">
+        <h2 class="calendar__title">Calendar</h2>
+        <i class="fa-solid fa-calendar-days"></i>
+      </section>
+    </main>
+  </body>
+</html>
