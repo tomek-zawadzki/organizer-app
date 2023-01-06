@@ -16,10 +16,11 @@
   <body>
     <main class="app">
       <section class="quotes">
-        <h1 class="quotes__text">
+        <h1 class="quotes__title">Motivate yourself</h1>
+        <p class="quotes__text">
           Olać to. Olać to. Olać to. Olać to. Olać to. Olać to. Olać to. Olać
           to. Olać to. Olać to. Olać to.
-        </h1>
+        </p>
         <p class="quotes__author">Tomasz Zawadzki</p>
         <button class="quotes__change-btn">Change Quote</button>
       </section>
@@ -128,6 +129,41 @@
 
       <section class="wallet">
         <h2 class="wallet__title">Your expenses</h2>
+
+        <div class="wallet__buttons">
+          <button class="expenses__add-expenses">Add expense</button>
+        </div>
+        <div class="wallet__summary">
+          <div class="summary__expenses">
+            <h3 class="summary__expenses--title">Expenses</h3>
+            <ul>
+              <li>Course</li>
+              <li>Cola</li>
+              <li>Netflix</li>
+            </ul>
+          </div>
+
+          <div class="summary__income">
+            <h3 class="summary__income--title">Income</h3>
+            <ul>
+              <li>Salary</li>
+              <li>revenue from Pati</li>
+              <li>Crypto</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="wallet__new-transaction">
+          <h2 class="new-transaction__title">Add new transaction</h2>
+          <label for="name">Name </label>
+          <input type="text" class="expenses__new-expenses" id="name" />
+          <label for="value">Value </label>
+          <input type="number" class="expenses__new-expenses" id="value" />
+          <div class="new-transactions__buttons">
+            <button class="new-transactions__buttons--save">Save</button>
+            <button class="new-transactions__buttons--cancel">Cancel</button>
+          </div>
+        </div>
       </section>
 
       <section class="calendar">
