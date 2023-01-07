@@ -66,6 +66,7 @@ body {
 
 .grid {
   grid-template-columns: 15rem 1fr 20rem;
+  margin-top: 2rem;
   display: grid;
 }
 
@@ -80,6 +81,46 @@ body {
 
 .hidden {
   display: none;
+}
+
+.menu {
+  background-color: var(--section-background-color);
+  border-radius: 4px;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+  display: flex;
+}
+
+.menu-close {
+  width: 60%;
+  background-color: var(--section-background-color);
+  border-radius: 4px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.menu__title {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+}
+
+.menu__list {
+  margin-left: -5rem;
+  padding-top: 6rem;
+  font-size: 1.8rem;
+  line-height: 8rem;
+}
+
+.menu__list--item {
+  cursor: pointer;
+  list-style: none;
+}
+
+.menu__list--item i {
+  padding-right: .6rem;
+  font-size: 2.6rem;
 }
 
 /*# sourceMappingURL=app.49742217.css.map */
