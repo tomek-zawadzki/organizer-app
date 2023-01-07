@@ -9,6 +9,10 @@
     <script src="https://kit.fontawesome.com/aee95fd16a.js" crossorigin="anonymous"></script>
     <script defer="" src="/src/pages/app.8f0c9192.js"></script>
     <link rel="stylesheet" href="/src/pages/app.49742217.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+
   </head>
   <body>
     <main class="app">
@@ -17,149 +21,153 @@
         <p class="quotes__text">
           Olać to. Olać to. Olać to. Olać to. Olać to. Olać to. Olać to. Olać
           to. Olać to. Olać to. Olać to.
+          Olać to. Olać to. Olać to. Olać to. Olać to. Olać to. Olać to. Olać
+          to. Olać to. Olać to. Olać to.
         </p>
         <p class="quotes__author">Tomasz Zawadzki</p>
         <button class="quotes__change-btn">Change Quote</button>
       </section>
 
-      <section class="menu">
-        <h2 class="menu title">Menu:</h2>
-        <ul class="menu__list">
-          <li class="menu__list--item">
-            <i class="fa-solid fa-list-check"></i> Tasks
-          </li>
-          <li class="menu__list--item">
-            <i class="fa-regular fa-note-sticky"></i> Notes
-          </li>
-          <li class="menu__list--item">
-            <i class="fa-solid fa-wallet"></i> Wallet
-          </li>
-          <li class="menu__list--item">
-            <i class="fa-solid fa-calendar-days"></i> Calendar
-          </li>
-        </ul>
-      </section>
+      <div class="grid">
+        <section class="menu">
+          <h2 class="menu title">Menu:</h2>
+          <ul class="menu__list">
+            <li class="menu__list--item">
+              <i class="fa-solid fa-list-check"></i> Tasks
+            </li>
+            <li class="menu__list--item">
+              <i class="fa-regular fa-note-sticky"></i> Notes
+            </li>
+            <li class="menu__list--item">
+              <i class="fa-solid fa-wallet"></i> Wallet
+            </li>
+            <li class="menu__list--item">
+              <i class="fa-solid fa-calendar-days"></i> Calendar
+            </li>
+          </ul>
+        </section>
 
-      <section class="tasks">
-        <h2 class="tasks__title">Tasks</h2>
-        <input type="text" class="tasks__input" placeholder="enter new task">
-        <button class="tasks__add-btn">Add +</button>
+        <section class="card tasks hidden">
+          <h2 class="tasks__title">Tasks</h2>
+          <input type="text" class="tasks__input" placeholder="enter new task">
+          <button class="tasks__add-btn">Add +</button>
 
-        <div class="tasks__new-task">
-          do something with yourself
-          <button class="tasks__new-task--accept-btn">
-            <i class="fa-solid fa-check"></i>
-          </button>
-          <button class="tasks__new-task--trash-btn">
-            <i class="fa-solid fa-trash"></i>
-          </button>
-        </div>
-        <div class="tasks__new-task">
-          buy something for me
-          <button class="tasks__new-task--accept-btn">
-            <i class="fa-solid fa-check"></i>
-          </button>
-          <button class="tasks__new-task--trash-btn">
-            <i class="fa-solid fa-trash"></i>
-          </button>
-        </div>
-        <div class="tasks__new-task">
-          go away
-          <button class="tasks__new-task--accept-btn">
-            <i class="fa-solid fa-check"></i>
-          </button>
-          <button class="tasks__new-task--trash-btn">
-            <i class="fa-solid fa-trash"></i>
-          </button>
-        </div>
-      </section>
+          <div class="tasks__new-task">
+            do something with yourself
+            <button class="tasks__new-task--accept-btn">
+              <i class="fa-solid fa-check"></i>
+            </button>
+            <button class="tasks__new-task--trash-btn">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+          <div class="tasks__new-task">
+            buy something for me
+            <button class="tasks__new-task--accept-btn">
+              <i class="fa-solid fa-check"></i>
+            </button>
+            <button class="tasks__new-task--trash-btn">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+          <div class="tasks__new-task">
+            go away
+            <button class="tasks__new-task--accept-btn">
+              <i class="fa-solid fa-check"></i>
+            </button>
+            <button class="tasks__new-task--trash-btn">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        </section>
 
-      <section class="notes">
-        <h2 class="notes__title">Notes</h2>
-        <form action="" class="notes__form">
-          <input type="text" placeholder="note title">
-          <textarea class="form__textarea" name="textarea" id="textarea" cols="30" rows="10" placeholder="write your note"></textarea>
-          <button class="notes__accept-btn">Add note</button>
-        </form>
-        <div class="notes__new-note">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
-          corporis doloribus animi nulla quo dolores aperiam ducimus nostrum
-          similique ex, magnam nihil at autem dignissimos beatae aliquam amet
-          veniam nesciunt?
-          <button class="note__new-note--trash-btn">
-            <i class="fa-solid fa-trash"></i>
-          </button>
-          <button class="note__new-note--xmark-btn">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </div>
-        <div class="notes__new-note">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
-          corporis doloribus animi nulla quo dolores aperiam ducimus nostrum
-          similique
-          <button class="note__new-note--trash-btn">
-            <i class="fa-solid fa-trash"></i>
-          </button>
-          <button class="note__new-note--xmark-btn">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </div>
-        <div class="notes__new-note">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
-          corporis doloribus animi nulla quo dolores aperiam ducimus nostrum
-          similique ex, magnam nihil at autem dignissimos beatae
-          <button class="note__new-note--trash-btn">
-            <i class="fa-solid fa-trash"></i>
-          </button>
-          <button class="note__new-note--xmark-btn">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </div>
-      </section>
+        <section class="card notes">
+          <h2 class="notes__title">Notes</h2>
+          <form action="" class="notes__form">
+            <input type="text" placeholder="note title">
+            <textarea class="form__textarea" name="textarea" id="textarea" cols="30" rows="10" placeholder="write your note"></textarea>
+            <button class="notes__accept-btn">Add note</button>
+          </form>
+          <div class="notes__new-note">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
+            corporis doloribus animi nulla quo dolores aperiam ducimus nostrum
+            similique ex, magnam nihil at autem dignissimos beatae aliquam amet
+            veniam nesciunt?
+            <button class="note__new-note--trash-btn">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+            <button class="note__new-note--xmark-btn">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="notes__new-note">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
+            corporis doloribus animi nulla quo dolores aperiam ducimus nostrum
+            similique
+            <button class="note__new-note--trash-btn">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+            <button class="note__new-note--xmark-btn">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="notes__new-note">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
+            corporis doloribus animi nulla quo dolores aperiam ducimus nostrum
+            similique ex, magnam nihil at autem dignissimos beatae
+            <button class="note__new-note--trash-btn">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+            <button class="note__new-note--xmark-btn">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        </section>
 
-      <section class="wallet">
-        <h2 class="wallet__title">Your expenses</h2>
+        <section class="card wallet hidden">
+          <h2 class="wallet__title">Your expenses</h2>
 
-        <div class="wallet__buttons">
-          <button class="expenses__add-expenses">Add expense</button>
-        </div>
-        <div class="wallet__summary">
-          <div class="summary__expenses">
-            <h3 class="summary__expenses--title">Expenses</h3>
-            <ul>
-              <li>Course</li>
-              <li>Cola</li>
-              <li>Netflix</li>
-            </ul>
+          <div class="wallet__buttons">
+            <button class="expenses__add-expenses">Add expense</button>
+          </div>
+          <div class="wallet__summary">
+            <div class="summary__expenses">
+              <h3 class="summary__expenses--title">Expenses</h3>
+              <ul>
+                <li>Course</li>
+                <li>Cola</li>
+                <li>Netflix</li>
+              </ul>
+            </div>
+
+            <div class="summary__income">
+              <h3 class="summary__income--title">Income</h3>
+              <ul>
+                <li>Salary</li>
+                <li>revenue from Pati</li>
+                <li>Crypto</li>
+              </ul>
+            </div>
           </div>
 
-          <div class="summary__income">
-            <h3 class="summary__income--title">Income</h3>
-            <ul>
-              <li>Salary</li>
-              <li>revenue from Pati</li>
-              <li>Crypto</li>
-            </ul>
+          <div class="wallet__new-transaction">
+            <h2 class="new-transaction__title">Add new transaction</h2>
+            <label for="name">Name </label>
+            <input type="text" class="expenses__new-expenses" id="name">
+            <label for="value">Value </label>
+            <input type="number" class="expenses__new-expenses" id="value">
+            <div class="new-transactions__buttons">
+              <button class="new-transactions__buttons--save">Save</button>
+              <button class="new-transactions__buttons--cancel">Cancel</button>
+            </div>
           </div>
-        </div>
+        </section>
 
-        <div class="wallet__new-transaction">
-          <h2 class="new-transaction__title">Add new transaction</h2>
-          <label for="name">Name </label>
-          <input type="text" class="expenses__new-expenses" id="name">
-          <label for="value">Value </label>
-          <input type="number" class="expenses__new-expenses" id="value">
-          <div class="new-transactions__buttons">
-            <button class="new-transactions__buttons--save">Save</button>
-            <button class="new-transactions__buttons--cancel">Cancel</button>
-          </div>
-        </div>
-      </section>
-
-      <section class="calendar">
-        <h2 class="calendar__title">Calendar</h2>
-        <i class="fa-solid fa-calendar-days"></i>
-      </section>
+        <section class="card calendar hidden">
+          <h2 class="calendar__title">Calendar</h2>
+          <i class="fa-solid fa-calendar-days"></i>
+        </section>
+      </div>
     </main>
   <script src="/app.29f9a374.js"></script></body>
 </html>

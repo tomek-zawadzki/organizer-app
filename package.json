@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "lodash-es": "^4.17.21",
+    "normalize.css": "^8.0.1",
     "sass": "^1.57.1"
   },
   "devDependencies": {
