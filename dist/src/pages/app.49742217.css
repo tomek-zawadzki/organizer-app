@@ -5,6 +5,9 @@
 :root {
   --font-color: #d3fff3;
   --section-background-color: #444;
+  --primary-btn-bcg: #dc9e82;
+  --hoover-btn-bcg: #b17960;
+  --btn-text-color: #181717;
 }
 
 html {
@@ -51,9 +54,9 @@ body {
 }
 
 .quotes__change-btn {
-  color: #333;
+  background-color: var(--primary-btn-bcg);
+  color: #181717;
   cursor: pointer;
-  background-color: #dc9e82;
   border: none;
   border-radius: 4px;
   padding: .6rem 1.2rem;
@@ -66,21 +69,9 @@ body {
 
 .grid {
   grid-template-columns: 15rem 1fr 20rem;
+  gap: .8rem;
   margin-top: 2rem;
   display: grid;
-}
-
-.card {
-  height: 100vh;
-  border: 1px solid #acfcd9;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-.hidden {
-  display: none;
 }
 
 .menu-close {
@@ -90,7 +81,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding-top: 5rem;
-  transition: all .3s;
+  transition: all .5s;
   display: flex;
 }
 
@@ -107,7 +98,9 @@ body {
 
 .menu__title {
   text-transform: uppercase;
+  cursor: pointer;
   font-size: 2.4rem;
+  transition: color .3s;
 }
 
 .menu__list {
@@ -119,12 +112,110 @@ body {
 
 .menu__list--item {
   cursor: pointer;
+  align-items: center;
   list-style: none;
+  transition: color .3s, transform .3s;
+  display: flex;
+}
+
+.menu__title:hover, .menu__list--item:hover {
+  color: #00a6ed;
+  transform: scale(1.1);
 }
 
 .menu__list--item i {
-  padding-right: .6rem;
+  padding-right: 1.2rem;
   font-size: 2.6rem;
+}
+
+.card {
+  height: 100vh;
+  background-color: var(--section-background-color);
+  border-radius: 4px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.card__title {
+  font-size: 3.2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.tasks__input--box {
+  width: 100%;
+  justify-content: center;
+  padding: 2rem 0 6rem;
+  display: flex;
+  box-shadow: 0 5px 5px -5px #222;
+}
+
+.tasks__input {
+  height: 3rem;
+  width: 60%;
+  border-radius: 4px;
+  margin-right: 2rem;
+  font-size: 2rem;
+}
+
+.tasks__input::placeholder {
+  padding: 0 .4rem;
+}
+
+.tasks__add-btn {
+  height: 2.8rem;
+  background-color: var(--primary-btn-bcg);
+  color: var(--btn-text-color);
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 0 1rem;
+  transition: background-color .3s;
+}
+
+.tasks__add-btn:hover {
+  background-color: var(--hoover-btn-bcg);
+}
+
+.new-tasks-box {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5.2rem 0;
+  display: flex;
+}
+
+.tasks__new-task {
+  width: 60%;
+  height: 4.6rem;
+  background-color: #555;
+  border-radius: 6px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  padding: 0 1rem;
+  font-size: 1.6rem;
+  display: flex;
+  box-shadow: 0 0 15px -4px #212121;
+}
+
+.tasks__new-task--btn {
+  background-color: var(--primary-btn-bcg);
+  color: var(--btn-text-color);
+  width: 4.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: .6rem .8rem;
+  transition: background-color .3s;
+}
+
+.tasks__new-task--btn:hover {
+  background-color: var(--hoover-btn-bcg);
 }
 
 /*# sourceMappingURL=app.49742217.css.map */

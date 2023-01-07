@@ -56,45 +56,78 @@
         </section>
 
         <section class="card tasks">
-          <h2 class="tasks__title">Tasks</h2>
-          <input
-            type="text"
-            class="tasks__input"
-            placeholder="enter new task"
-          />
-          <button class="tasks__add-btn">Add +</button>
+          <h2 class="card__title tasks__title">Tasks</h2>
+          <div class="tasks__input--box">
+            <input
+              type="text"
+              class="tasks__input"
+              placeholder="enter new task"
+            />
+            <button class="tasks__add-btn">Add +</button>
+          </div>
 
-          <div class="tasks__new-task">
-            do something with yourself
-            <button class="tasks__new-task--accept-btn">
-              <i class="fa-solid fa-check"></i>
-            </button>
-            <button class="tasks__new-task--trash-btn">
-              <i class="fa-solid fa-trash"></i>
-            </button>
-          </div>
-          <div class="tasks__new-task">
-            buy something for me
-            <button class="tasks__new-task--accept-btn">
-              <i class="fa-solid fa-check"></i>
-            </button>
-            <button class="tasks__new-task--trash-btn">
-              <i class="fa-solid fa-trash"></i>
-            </button>
-          </div>
-          <div class="tasks__new-task">
-            go away
-            <button class="tasks__new-task--accept-btn">
-              <i class="fa-solid fa-check"></i>
-            </button>
-            <button class="tasks__new-task--trash-btn">
-              <i class="fa-solid fa-trash"></i>
-            </button>
+          <div class="new-tasks-box">
+            <div class="tasks__new-task">
+              <p class="tasks__new-task--text">do something with yourself</p>
+              <div class="tasks__new-task--buttons">
+                <button
+                  class="tasks__new-task--accept-btn tasks__new-task--btn"
+                >
+                  <i class="fa-solid fa-check"></i>
+                </button>
+                <button
+                  class="tasks__new-task--accept-btn tasks__new-task--btn"
+                >
+                  edit
+                </button>
+                <button class="tasks__new-task--trash-btn tasks__new-task--btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
+            <div class="tasks__new-task">
+              <p class="tasks__new-task--text">
+                do something with yourself, do it now
+              </p>
+              <div class="tasks__new-task--buttons">
+                <button
+                  class="tasks__new-task--accept-btn tasks__new-task--btn"
+                >
+                  <i class="fa-solid fa-check"></i>
+                </button>
+                <button
+                  class="tasks__new-task--accept-btn tasks__new-task--btn"
+                >
+                  edit
+                </button>
+                <button class="tasks__new-task--trash-btn tasks__new-task--btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
+            <div class="tasks__new-task">
+              <p class="tasks__new-task--text">do something with</p>
+              <div class="tasks__new-task--buttons">
+                <button
+                  class="tasks__new-task--accept-btn tasks__new-task--btn"
+                >
+                  <i class="fa-solid fa-check"></i>
+                </button>
+                <button
+                  class="tasks__new-task--accept-btn tasks__new-task--btn"
+                >
+                  edit
+                </button>
+                <button class="tasks__new-task--trash-btn tasks__new-task--btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
           </div>
         </section>
 
         <section class="card notes hidden">
-          <h2 class="notes__title">Notes</h2>
+          <h2 class="card__title notes__title">Notes</h2>
           <form action="" class="notes__form">
             <input type="text" placeholder="note title" />
             <textarea
@@ -144,7 +177,7 @@
         </section>
 
         <section class="card wallet hidden">
-          <h2 class="wallet__title">Your expenses</h2>
+          <h2 class="card__title wallet__title">Your expenses</h2>
 
           <div class="wallet__buttons">
             <button class="expenses__add-expenses">Add expense</button>
@@ -183,6 +216,7 @@
         </section>
 
         <section class="card calendar hidden">
+          <h2 class="wallet__title">Your expenses</h2>
           <h2 class="calendar__title">Calendar</h2>
           <i class="fa-solid fa-calendar-days"></i>
         </section>
