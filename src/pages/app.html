@@ -55,7 +55,7 @@
           </ul>
         </section>
 
-        <section class="card tasks">
+        <section class="card tasks hidden">
           <h2 class="card__title tasks__title">Tasks</h2>
           <div class="tasks__input--box">
             <input
@@ -126,53 +126,60 @@
           </div>
         </section>
 
-        <section class="card notes hidden">
+        <section class="card notes">
           <h2 class="card__title notes__title">Notes</h2>
           <form action="" class="notes__form">
-            <input type="text" placeholder="note title" />
+            <input
+              class="form__note-title"
+              type="text"
+              placeholder="enter note title"
+            />
             <textarea
               class="form__textarea"
               name="textarea"
               id="textarea"
               cols="30"
               rows="10"
-              placeholder="write your note"
+              placeholder="write your note..."
             ></textarea>
-            <button class="notes__accept-btn">Add note</button>
+            <button class="form__accept-btn">Add note</button>
           </form>
           <div class="notes__new-note">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
-            corporis doloribus animi nulla quo dolores aperiam ducimus nostrum
-            similique ex, magnam nihil at autem dignissimos beatae aliquam amet
-            veniam nesciunt?
-            <button class="note__new-note--trash-btn">
-              <i class="fa-solid fa-trash"></i>
-            </button>
-            <button class="note__new-note--xmark-btn">
-              <i class="fa-solid fa-xmark"></i>
-            </button>
+            <p class="notes__new-note--title">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </p>
+            <div class="notes__new-note--buttons">
+              <button class="note__new-note--xmark-btn note__new-note--btn">
+                edit
+              </button>
+              <button class="note__new-note--trash-btn note__new-note--btn">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
           </div>
           <div class="notes__new-note">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
-            corporis doloribus animi nulla quo dolores aperiam ducimus nostrum
-            similique
-            <button class="note__new-note--trash-btn">
-              <i class="fa-solid fa-trash"></i>
-            </button>
-            <button class="note__new-note--xmark-btn">
-              <i class="fa-solid fa-xmark"></i>
-            </button>
+            <p class="notes__new-note--title">Lorem ipsum dolor elit.</p>
+            <div class="notes__new-note--buttons">
+              <button class="note__new-note--xmark-btn note__new-note--btn">
+                edit
+              </button>
+              <button class="note__new-note--trash-btn note__new-note--btn">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
           </div>
           <div class="notes__new-note">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
-            corporis doloribus animi nulla quo dolores aperiam ducimus nostrum
-            similique ex, magnam nihil at autem dignissimos beatae
-            <button class="note__new-note--trash-btn">
-              <i class="fa-solid fa-trash"></i>
-            </button>
-            <button class="note__new-note--xmark-btn">
-              <i class="fa-solid fa-xmark"></i>
-            </button>
+            <p class="notes__new-note--title">
+              sit amet consectetur, adipisicing elit.
+            </p>
+            <div class="notes__new-note--buttons">
+              <button class="note__new-note--xmark-btn note__new-note--btn">
+                edit
+              </button>
+              <button class="note__new-note--trash-btn note__new-note--btn">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
           </div>
         </section>
 

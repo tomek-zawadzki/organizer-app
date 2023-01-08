@@ -106,7 +106,7 @@ body {
   font-size: 2.4rem;
   text-transform: uppercase;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .menu__list {
@@ -131,6 +131,8 @@ body {
 }
 
 .menu__list--item i {
+  font-size: 1.8rem;
+  line-height: 8rem;
   padding-right: 1.2rem;
   font-size: 2.6rem;
 }
@@ -226,5 +228,69 @@ body {
 }
 
 .tasks__new-task--btn:hover {
+  background-color: var(--hoover-btn-bcg);
+}
+
+/* NOTES SECTION */
+.notes__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0 6rem 0;
+  width: 100%;
+}
+
+.form__note-title {
+  width: 60%;
+  margin-bottom: 1.2rem;
+}
+
+.form__textarea {
+  width: 60%;
+  height: 20rem;
+  margin-bottom: 1.2rem;
+}
+
+.form__accept-btn {
+  background-color: var(--primary-btn-bcg);
+  color: var(--btn-text-color);
+  border: none;
+  width: 8.2rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form__accept-btn:hover {
+  background-color: var(--hoover-btn-bcg);
+}
+
+.notes__new-note {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  height: 4.6rem;
+  font-size: 1.4rem;
+  background-color: #555555;
+  margin-bottom: 1.2rem;
+  padding: 0 1rem;
+  border-radius: 6px;
+  box-shadow: 0px 0px 15px -4px rgba(33, 33, 33, 1);
+}
+
+.note__new-note--btn {
+  background-color: var(--primary-btn-bcg);
+  color: var(--btn-text-color);
+  border: none;
+  width: 4.2rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.note__new-note--btn:hover {
   background-color: var(--hoover-btn-bcg);
 }
