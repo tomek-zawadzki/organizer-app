@@ -104,7 +104,7 @@
           </div>
         </section>
 
-        <section class="card notes">
+        <section class="card notes hidden">
           <h2 class="card__title notes__title">Notes</h2>
           <form action="" class="notes__form">
             <input class="form__note-title" type="text" placeholder="enter note title">
@@ -150,41 +150,63 @@
           </div>
         </section>
 
-        <section class="card wallet hidden">
-          <h2 class="card__title wallet__title">Your expenses</h2>
+        <section class="card wallet">
+          <h2 class="card__title wallet__title">Your Wallet</h2>
 
           <div class="wallet__buttons">
-            <button class="expenses__add-expenses">Add expense</button>
+            <button class="add-transaction-btn">Add transaction</button>
           </div>
           <div class="wallet__summary">
             <div class="summary__expenses">
-              <h3 class="summary__expenses--title">Expenses</h3>
-              <ul>
-                <li>Course</li>
-                <li>Cola</li>
-                <li>Netflix</li>
-              </ul>
+              <h3 class="summary__expenses--title">Expenses:</h3>
+              <div class="expenses__list">
+                <p class="expenses__list--item">
+                  Course <span class="expenses__list--value">50</span>
+                </p>
+                <p class="expenses__list--item">
+                  Cola <span class="expenses__list--value">50</span>
+                </p>
+                <p class="expenses__list--item">
+                  Netflix <span class="expenses__list--value">50</span>
+                </p>
+              </div>
             </div>
 
-            <div class="summary__income">
-              <h3 class="summary__income--title">Income</h3>
-              <ul>
-                <li>Salary</li>
-                <li>revenue from Pati</li>
-                <li>Crypto</li>
-              </ul>
+            <div class="summary__incomes">
+              <h3 class="summary__incomes--title">Incomes:</h3>
+              <div class="incomes__list">
+                <p class="icomes__list--item">
+                  Salary <span class="expenses__list--value">50</span>
+                </p>
+                <p class="icomes__list--item">
+                  revenue from Pati
+                  <span class="expenses__list--value">50</span>
+                </p>
+                <p class="icomse__list--item">
+                  Crypto <span class="expenses__list--value">50</span>
+                </p>
+              </div>
             </div>
           </div>
 
           <div class="wallet__new-transaction">
             <h2 class="new-transaction__title">Add new transaction</h2>
             <label for="name">Name </label>
-            <input type="text" class="expenses__new-expenses" id="name">
+            <input type="text" class="expenses__new-expenses" id="name" placeholder="enter transaction name...">
             <label for="value">Value </label>
-            <input type="number" class="expenses__new-expenses" id="value">
+            <input type="number" class="expenses__new-expenses" id="value" placeholder="enter transaction value...">
+            <label for="type">Type</label>
+            <select id="type">
+              <option value="expense" selected="">expense</option>
+              <option value="income">income</option>
+            </select>
             <div class="new-transactions__buttons">
-              <button class="new-transactions__buttons--save">Save</button>
-              <button class="new-transactions__buttons--cancel">Cancel</button>
+              <button class="new-transactions__buttons--save new-transactions__btn">
+                Save
+              </button>
+              <button class="new-transactions__buttons--cancel new-transactions__btn">
+                Cancel
+              </button>
             </div>
           </div>
         </section>
