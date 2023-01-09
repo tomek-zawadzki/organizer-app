@@ -22,12 +22,8 @@
   <body>
     <main class="app">
       <section class="quotes">
-        <h1 class="quotes__title">Motivate yourself</h1>
-        <p class="quotes__text">
-          Olać to. Olać to. Olać to. Olać to. Olać to. Olać to. Olać to. Olać
-          to. Olać to. Olać to. Olać to. Olać to. Olać to. Olać to. Olać to.
-          Olać to. Olać to. Olać to. Olać to. Olać to. Olać to. Olać to.
-        </p>
+        <h1 class="quotes__title">Quote for today</h1>
+        <p class="quotes__text"></p>
         <p class="quotes__author">Tomasz Zawadzki</p>
         <button class="quotes__change-btn">Change Quote</button>
       </section>
@@ -37,25 +33,31 @@
           <h2 class="menu__title">Menu</h2>
           <ul class="menu__list">
             <li class="menu__list--item">
-              <i class="fa-solid fa-list-check"></i>
+              <p class="menu__list--btn">
+                <i class="fa-solid fa-list-check"></i>
+              </p>
               <span class="menu__list--text hidden">Tasks</span>
             </li>
             <li class="menu__list--item">
-              <i class="fa-regular fa-note-sticky"></i>
+              <p class="menu__list--btn">
+                <i class="fa-regular fa-note-sticky"></i>
+              </p>
               <span class="menu__list--text hidden">Notes</span>
             </li>
             <li class="menu__list--item">
-              <i class="fa-solid fa-wallet"></i>
+              <p class="menu__list--btn"><i class="fa-solid fa-wallet"></i></p>
               <span class="menu__list--text hidden">Wallet</span>
             </li>
             <li class="menu__list--item">
-              <i class="fa-solid fa-calendar-days"></i>
+              <p class="menu__list--btn">
+                <i class="fa-solid fa-calendar-days"></i>
+              </p>
               <span class="menu__list--text hidden">Calendar</span>
             </li>
           </ul>
         </section>
 
-        <section class="card tasks hidden">
+        <section class="card tasks active-card">
           <h2 class="card__title tasks__title">Tasks</h2>
           <div class="tasks__input--box">
             <input
@@ -183,7 +185,7 @@
           </div>
         </section>
 
-        <section class="card wallet">
+        <section class="card wallet hidden">
           <h2 class="card__title wallet__title">Your Wallet</h2>
 
           <div class="wallet__buttons">

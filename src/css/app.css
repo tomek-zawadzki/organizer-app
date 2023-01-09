@@ -25,6 +25,10 @@ body {
   color: var(--font-color);
 }
 
+.app {
+  width: 120rem;
+}
+
 /* QUOTES SECTION */
 .quotes {
   display: flex;
@@ -33,6 +37,7 @@ body {
   align-items: center;
   background-color: var(--section-background-color);
   width: 80%;
+  height: 20rem;
   margin: 0 auto;
   padding: 1rem;
   border-radius: 6px;
@@ -45,10 +50,16 @@ body {
 }
 
 .quotes__text {
-  width: 80%;
+  display: flex;
+  align-items: center;
+  width: 60%;
+  height: 10rem;
   font-style: italic;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  margin: 1.2rem 0 0 0;
 }
+
+
 
 .quotes__author {
   width: 60%;
@@ -141,12 +152,16 @@ body {
 
 .card {
   position: relative;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   height: 100vh;
   background-color: var(--section-background-color);
   border-radius: 4px;
+}
+
+.active-card {
+  display: flex;
 }
 
 .card__title {
