@@ -72,10 +72,12 @@ const taskBox = document.querySelector(".new-tasks-box");
 const addTaskBtn = document.querySelector(".tasks__add-btn");
 let taskPlace;
 let newTask;
+let idNumber = 0;
 const addNewTask = ()=>{
     if (taskInput.value !== "") {
         taskPlace = document.createElement("div");
         taskPlace.classList.add("tasks__new-task");
+        taskPlace.setAttribute("id", `id-task-${idNumber}`);
         taskBox.appendChild(taskPlace);
         newTask = document.createElement("p");
         newTask.innerHTML = taskInput.value;
@@ -105,6 +107,16 @@ const createNewTaskBtns = ()=>{
     btnsArea.appendChild(editBtn);
     btnsArea.appendChild(deleteBtn);
 };
+const deleteTask = (e)=>{
+    const taskToDelete = e.target.closest(".tasks__new-task").id;
+    taskToDelete.remove();
+};
+const actionClick = (e)=>{
+    if (e.target.classList.value !== "") {
+        if (e.target.closest("button").classList.contains("tasks__new-task--trash-btn")) deleteTask(e);
+    }
+};
 addTaskBtn.addEventListener("click", addNewTask);
+taskBox.addEventListener("click", actionClick);
 
 //# sourceMappingURL=app.8f0c9192.js.map

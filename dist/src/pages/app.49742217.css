@@ -24,7 +24,7 @@ body {
 }
 
 .app {
-  width: 120rem;
+  width: 144rem;
 }
 
 .quotes {
@@ -77,7 +77,7 @@ body {
 }
 
 .grid {
-  grid-template-columns: 15rem 1fr 20rem;
+  grid-template-columns: 15% 1fr 20%;
   gap: .8rem;
   margin-top: 2rem;
   display: grid;
@@ -88,6 +88,7 @@ body {
   background-color: var(--section-background-color);
   border-radius: 4px;
   flex-direction: column;
+  justify-self: flex-end;
   align-items: center;
   padding-top: 5rem;
   transition: all .5s;
