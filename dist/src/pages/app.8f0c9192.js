@@ -108,12 +108,13 @@ const createNewTaskBtns = ()=>{
     btnsArea.appendChild(deleteBtn);
 };
 const deleteTask = (e)=>{
-    const taskToDelete = e.target.closest(".tasks__new-task").id;
+    const taskToDelete = e.target.closest(".tasks__new-task");
     taskToDelete.remove();
 };
 const actionClick = (e)=>{
     if (e.target.classList.value !== "") {
-        if (e.target.closest("button").classList.contains("tasks__new-task--trash-btn")) deleteTask(e);
+        if (e.target.closest("button").classList.contains("tasks__new-task--accept-btn")) e.target.closest("div").parentElement.firstElementChild.classList.toggle("task-finished");
+        else if (e.target.closest("button").classList.contains("tasks__new-task--trash-btn")) deleteTask(e);
     }
 };
 addTaskBtn.addEventListener("click", addNewTask);

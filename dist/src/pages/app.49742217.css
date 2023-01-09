@@ -225,6 +225,10 @@ body {
   display: flex;
 }
 
+.task-finished {
+  text-decoration: line-through;
+}
+
 .tasks__new-task--btn {
   background-color: var(--primary-btn-bcg);
   color: var(--btn-text-color);
