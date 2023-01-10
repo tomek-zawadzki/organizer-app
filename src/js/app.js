@@ -89,13 +89,19 @@ cardBtn.forEach((btn) => {
 const taskInput = document.querySelector(".tasks__input");
 const taskBox = document.querySelector(".new-tasks-box");
 const addTaskBtn = document.querySelector(".tasks__add-btn");
+const acceptEditWindowBtn = document.querySelector(".edit-btn__accept");
+const closeEditWindowBtn = document.querySelector(".edit-btn__close");
+let editWidnow = document.querySelector(".tasks__edit");
+let editInput = document.querySelector(".tasks__edit--input");
 
 let taskPlace;
 let newTask;
 let idNumber = 0;
+let taskToEdit;
 
 const addNewTask = () => {
   if (taskInput.value !== "") {
+    idNumber++;
     taskPlace = document.createElement("div");
     taskPlace.classList.add("tasks__new-task");
     taskPlace.setAttribute("id", `id-task-${idNumber}`);
@@ -143,6 +149,13 @@ const deleteTask = (e) => {
   taskToDelete.remove();
 };
 
+const openEditWindow = (e) => {
+  const oldTask = e.target.closest(".tasks__new-task").id;
+  taskToEdit = document.getElementById(oldTask);
+  editInput.value = taskToEdit.firstChild.textContent;
+  editWidnow.style.display = "flex";
+};
+
 const actionClick = (e) => {
   if (e.target.classList.value !== "") {
     if (
@@ -159,9 +172,25 @@ const actionClick = (e) => {
         .classList.contains("tasks__new-task--trash-btn")
     ) {
       deleteTask(e);
+    } else if (
+      e.target.closest("button").classList.contains("tasks__new-task--edit-btn")
+    ) {
+      openEditWindow(e);
     }
   }
 };
 
+const changeTask = () => {
+  taskToEdit.firstChild.textContent = editInput.value;
+  editWidnow.style.display = "none";
+  editInput.innerHTML = "";
+};
+
+const closeEditWindow = () => {
+  editWidnow.style.display = "none";
+};
+
 addTaskBtn.addEventListener("click", addNewTask);
 taskBox.addEventListener("click", actionClick);
+acceptEditWindowBtn.addEventListener("click", changeTask);
+closeEditWindowBtn.addEventListener("click", closeEditWindow);

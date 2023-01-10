@@ -244,6 +244,54 @@ body {
   background-color: var(--hoover-btn-bcg);
 }
 
+.tasks__edit {
+  color: var(--font-color);
+  width: 65%;
+  height: 30%;
+  background-color: #777;
+  border-radius: 6px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  display: none;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px -4px #212121;
+}
+
+.tasks__edit--label {
+  font-size: 3.2rem;
+}
+
+.tasks__edit--input {
+  width: 85%;
+  padding: .6rem .2rem;
+  font-size: 1.4rem;
+}
+
+.tasks__edit--buttons {
+  gap: 1.8rem;
+  display: flex;
+}
+
+.edit-btn {
+  background-color: var(--primary-btn-bcg);
+  color: var(--btn-text-color);
+  width: 10rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: .4rem .8rem;
+  font-size: 1.8rem;
+  transition: background-color .3s;
+}
+
+.edit-btn:hover {
+  background-color: var(--hoover-btn-bcg);
+}
+
 .notes__form {
   width: 100%;
   flex-direction: column;
