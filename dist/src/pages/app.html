@@ -53,7 +53,7 @@
           </ul>
         </section>
 
-        <section class="card tasks active-card">
+        <section class="card tasks hidden">
           <h2 class="card__title tasks__title">Tasks</h2>
           <div class="tasks__input--box">
             <input type="text" class="tasks__input" placeholder="enter new task">
@@ -72,47 +72,41 @@
           </div>
         </section>
 
-        <section class="card notes hidden">
+        <section class="card notes active-card">
           <h2 class="card__title notes__title">Notes</h2>
-          <form action="" class="notes__form">
+          <div action="" class="notes__form">
             <input class="form__note-title" type="text" placeholder="enter note title">
             <textarea class="form__textarea" name="textarea" id="textarea" cols="30" rows="10" placeholder="write your note..."></textarea>
             <button class="form__accept-btn">Add note</button>
-          </form>
-          <div class="notes__new-note">
-            <p class="notes__new-note--title">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            </p>
-            <div class="notes__new-note--buttons">
-              <button class="note__new-note--xmark-btn note__new-note--btn">
-                edit
-              </button>
-              <button class="note__new-note--trash-btn note__new-note--btn">
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </div>
           </div>
-          <div class="notes__new-note">
-            <p class="notes__new-note--title">Lorem ipsum dolor elit.</p>
-            <div class="notes__new-note--buttons">
-              <button class="note__new-note--xmark-btn note__new-note--btn">
-                edit
-              </button>
-              <button class="note__new-note--trash-btn note__new-note--btn">
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </div>
+          <div class="new-notes-box">
+            <!-- <div class="notes__new-note">
+              <p class="notes__new-note--title">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </p>
+              <div class="notes__new-note--buttons">
+                <button class="note__new-note--edit-btn note__new-note--btn">
+                  edit
+                </button>
+                <button class="note__new-note--trash-btn note__new-note--btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div> -->
           </div>
-          <div class="notes__new-note">
-            <p class="notes__new-note--title">
-              sit amet consectetur, adipisicing elit.
-            </p>
-            <div class="notes__new-note--buttons">
-              <button class="note__new-note--xmark-btn note__new-note--btn">
-                edit
+
+          <div class="note-edit">
+            <input class="note-edit__title">
+            <textarea class="note-edit__content">
+              
+            </textarea>
+
+            <div class="note-edit__buttons tasks__edit--buttons">
+              <button class="note-edit__btn note-edit__btn--accept">
+                Accept
               </button>
-              <button class="note__new-note--trash-btn note__new-note--btn">
-                <i class="fa-solid fa-trash"></i>
+              <button class="note-edit__btn note-edit__btn--close">
+                Close
               </button>
             </div>
           </div>

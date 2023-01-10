@@ -194,3 +194,51 @@ addTaskBtn.addEventListener("click", addNewTask);
 taskBox.addEventListener("click", actionClick);
 acceptEditWindowBtn.addEventListener("click", changeTask);
 closeEditWindowBtn.addEventListener("click", closeEditWindow);
+
+// NOTES SECTION
+const notesBox = document.querySelector(".new-notes-box");
+const noteTitle = document.querySelector(".form__note-title");
+const noteContent = document.querySelector(".form__textarea");
+const addNoteBtn = document.querySelector(".form__accept-btn");
+let notePlace;
+
+const addNewNote = () => {
+  if (noteTitle.value !== "") {
+    idNumber++;
+    notePlace = document.createElement("div");
+    notePlace.classList.add("notes__new-note");
+    notePlace.setAttribute("id", `id-note-${idNumber}`);
+    notesBox.appendChild(notePlace);
+    newNote = document.createElement("p");
+    newNote.innerHTML = noteTitle.value;
+    newNote.classList.add("notes__new-note--title");
+    notePlace.appendChild(newNote);
+
+    createNewNoteBtns();
+  } else {
+    console.log("wprowadz tekst");
+  }
+
+  noteTitle.value = "";
+};
+
+const createNewNoteBtns = () => {
+  const btnsNoteArea = document.createElement("div");
+  btnsNoteArea.classList.add("notes__new-note--buttons");
+  notePlace.appendChild(btnsNoteArea);
+
+  const editNoteBtn = document.createElement("button");
+  editNoteBtn.classList.add("note__new-note--edit-btn");
+  editNoteBtn.classList.add("note__new-note--btn");
+  editNoteBtn.innerHTML = "edit";
+
+  const deleteNoteBtn = document.createElement("button");
+  deleteNoteBtn.classList.add("note__new-note--trash-btn");
+  deleteNoteBtn.classList.add("note__new-note--btn");
+  deleteNoteBtn.innerHTML = '<i class="fa-solid fa-trash"></i>';
+
+  btnsNoteArea.appendChild(editNoteBtn);
+  btnsNoteArea.appendChild(deleteNoteBtn);
+};
+
+addNoteBtn.addEventListener("click", addNewNote);
