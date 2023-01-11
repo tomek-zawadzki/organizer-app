@@ -110,6 +110,8 @@ body {
   border-radius: 4px;
   width: 100%;
   transition: all 0.5s;
+  justify-self: flex-end;
+  transition: all 0.5s;
 }
 
 .menu__title {
@@ -132,6 +134,19 @@ body {
   list-style: none;
   cursor: pointer;
   transition: color 0.3s, transform 0.3s;
+}
+
+.menu__list--text {
+  animation: show-text 0.2s linear;
+}
+
+@keyframes show-text {
+  from {
+    transform: translateX(1px);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .menu__title:hover,
@@ -410,7 +425,6 @@ body {
   width: 70%;
   height: 30rem;
   font-size: 2.2rem;
-
 }
 
 .note-edit__buttons {
