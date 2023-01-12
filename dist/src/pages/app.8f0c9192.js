@@ -1,3 +1,4 @@
+// import moment from "moment";
 const menuBox = document.querySelector(".menu-close");
 const menuItems = document.querySelectorAll(".menu__list--text");
 const menuBtn = document.querySelector(".menu__title");
@@ -179,5 +180,11 @@ const createNewNoteBtns = ()=>{
     btnsNoteArea.appendChild(deleteNoteBtn);
 };
 addNoteBtn.addEventListener("click", addNewNote);
+// Today
+const todayDate = document.querySelector(".today__date--day");
+// let getDate = new Date().toDateString();
+let getDate = moment().format();
+console.log(getDate);
+todayDate.textContent = getDate;
 
 //# sourceMappingURL=app.8f0c9192.js.map

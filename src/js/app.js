@@ -1,3 +1,6 @@
+import string from "lodash-es/string";
+import moment from "moment";
+
 const menuBox = document.querySelector(".menu-close");
 const menuItems = document.querySelectorAll(".menu__list--text");
 const menuBtn = document.querySelector(".menu__title");
@@ -242,3 +245,14 @@ const createNewNoteBtns = () => {
 };
 
 addNoteBtn.addEventListener("click", addNewNote);
+
+// Today
+const todayDate = document.querySelector(".today__date--day");
+const todayDayName = document.querySelector(".today__date--day-name");
+
+// let getDate = new Date().toDateString();
+const getDate = moment().format("DD.MM.YYYY");
+const getDay = moment().format("dddd");
+
+todayDate.textContent = getDate;
+todayDayName.textContent = getDay;

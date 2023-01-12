@@ -135,7 +135,7 @@ body {
 
 @keyframes show-text {
   from {
-    transform: translateX(1px);
+    transform: translateX(2px);
   }
 
   to {
@@ -169,11 +169,11 @@ body {
 }
 
 .card__title {
-  font-size: 3.2rem;
+  font-size: 4.2rem;
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .tasks__input--box {
@@ -505,6 +505,34 @@ body {
   border: none;
   border-radius: 4px;
   padding: .6rem 1.2rem;
+}
+
+.today {
+  text-align: center;
+  background-color: #444;
+  border-radius: 6px;
+}
+
+.today__title {
+  font-size: 3.2rem;
+}
+
+.today__date {
+  flex-direction: column;
+  gap: .6rem;
+  margin: 0;
+  display: flex;
+}
+
+.today__date--day {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.today__date--day-name {
+  margin: 0;
+  font-size: 2.4rem;
 }
 
 /*# sourceMappingURL=app.49742217.css.map */

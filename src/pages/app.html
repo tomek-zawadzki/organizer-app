@@ -10,7 +10,7 @@
       src="https://kit.fontawesome.com/aee95fd16a.js"
       crossorigin="anonymous"
     ></script>
-    <script defer src="/src/js/app.js"></script>
+    <script defer type="module" src="/src/js/app.js"></script>
     <link rel="stylesheet" href="/src/css/app.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -123,12 +123,9 @@
             </div> -->
           </div>
 
-          <div class="note-edit">
+          <div class="note-edit hidden">
             <input class="note-edit__title" />
-            <textarea class="note-edit__content">
-              
-            </textarea>
-
+            <textarea class="note-edit__content"> </textarea>
             <div class="note-edit__buttons tasks__edit--buttons">
               <button class="note-edit__btn note-edit__btn--accept">
                 Accept
@@ -219,6 +216,13 @@
           <h2 class="wallet__title">Your expenses</h2>
           <h2 class="calendar__title">Calendar</h2>
           <i class="fa-solid fa-calendar-days"></i>
+        </section>
+        <section class="today">
+          <h2 class="today__title">Today</h2>
+          <div class="today__date">
+            <p class="today__date--day">ti bedzie data</p>
+            <p class="today__date--day-name">ti bedzie data</p>
+          </div>
         </section>
       </div>
     </main>
