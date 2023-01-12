@@ -721,11 +721,44 @@ addNoteBtn.addEventListener("click", addNewNote);
 // Today
 const todayDate = document.querySelector(".today__date--day");
 const todayDayName = document.querySelector(".today__date--day-name");
+const temperature = document.querySelector(".weather__temp");
 // let getDate = new Date().toDateString();
 const getDate = (0, _momentDefault.default)().format("DD.MM.YYYY");
 const getDay = (0, _momentDefault.default)().format("dddd");
 todayDate.textContent = getDate;
 todayDayName.textContent = getDay;
+const getWeather = async ()=>{
+    try {
+        const res = await fetch("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m");
+        const data = await res.json();
+        const currentDay = (0, _momentDefault.default)().format("YYYY-MM-DD");
+        const currentTime = (0, _momentDefault.default)().format("HH");
+        const properData = `${currentDay}T${currentTime}:00`;
+        // temperature.textContent = data.hourly.temperature_2m;
+        console.log(properData);
+        console.log(data);
+        data.hourly.time.forEach((time, i)=>{
+            if (time === properData) {
+                console.log(time, data.hourly.temperature_2m[i]);
+                temperature.textContent = `${data.hourly.temperature_2m[i]} C`;
+            }
+        });
+    } catch (err) {
+        console.error(err);
+    }
+};
+getWeather();
+if (navigator.geolocation) navigator.geolocation.getCurrentPosition(function(position) {
+    const { latitude  } = position.coords;
+    const { longitude  } = position.coords;
+    const coords = [
+        latitude,
+        longitude
+    ];
+    console.log(coords);
+}, function() {
+    alert("could not get your position");
+});
 
 },{"moment":"jwcsj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","lodash-es/string":"6lh38"}],"jwcsj":[function(require,module,exports) {
 //! moment.js
