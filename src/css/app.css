@@ -1,7 +1,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 :root {
@@ -82,7 +82,7 @@ body {
 /* APP */
 .grid {
   display: grid;
-  grid-template-columns: 15% 1fr 20%;
+  grid-template-columns: 15% 1fr 25%;
   margin-top: 2rem;
   gap: 0.8rem;
 }
@@ -172,6 +172,7 @@ body {
   height: 100%;
   background-color: var(--section-background-color);
   border-radius: 4px;
+  box-shadow: 0 0 24 rgba(0, 0, 0, 0.2);
 }
 
 .active-card {
@@ -552,5 +553,40 @@ body {
 
 .today__date--day-name {
   font-size: 2.4rem;
+  margin: 0;
+}
+
+.weather__img {
+  height: 20rem;
+  margin-top: 5.2rem;
+}
+
+.weather__temp {
+  font-size: 2.8rem;
+  margin: 0;
+}
+
+.weather__sun {
+  display: flex;
+}
+
+.sunrise,
+.sunset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 1.8rem;
+  margin-top: 3rem;
+}
+
+.sunset__img,
+.sunrise__img {
+  height: 10rem;
+}
+
+.sunset__text,
+.sunrise__text {
   margin: 0;
 }
