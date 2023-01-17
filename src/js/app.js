@@ -251,6 +251,9 @@ const todayDayName = document.querySelector(".today__date--day-name");
 const temperature = document.querySelector(".weather__temp");
 const sunset = document.querySelector(".sunset__text");
 const sunrise = document.querySelector(".sunrise__text");
+const weatherIcon = document.querySelector(".weather__img");
+const weatherPressure = document.querySelector(".weather__pressure");
+const weatherHumidity = document.querySelector(".weather__humidity");
 const weatherBox = document.querySelector(".weather");
 
 // let getDate = new Date().toDateString();
@@ -260,85 +263,43 @@ const getDay = moment().format("dddd");
 todayDate.textContent = getDate;
 todayDayName.textContent = getDay;
 
-const getWeather = async () => {
+const getWeatherData = async (lat, long) => {
   try {
     const res = await fetch(
-      "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m,relativehumidity_2m,dewpoint_2m,apparent_temperature,precipitation,rain,showers,snowfall,snow_depth,freezinglevel_height,weathercode,pressure_msl,surface_pressure,cloudcover,cloudcover_low,cloudcover_mid,cloudcover_high,visibility,evapotranspiration,et0_fao_evapotranspiration,vapor_pressure_deficit,cape&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,sunrise,sunset,precipitation_sum,rain_sum,showers_sum,snowfall_sum,precipitation_hours,windspeed_10m_max,windgusts_10m_max,winddirection_10m_dominant,shortwave_radiation_sum,et0_fao_evapotranspiration&current_weather=true&timezone=auto"
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=0ac8d24292bec7ba2bf644e405cffefb`
     );
     const data = await res.json();
+    temperature.textContent = `${(data.main.temp - 273.15).toFixed(1)} ℃`;
     console.log(data);
-
-    const currentDay = moment().format("YYYY-MM-DD");
-    const currentTime = moment().format("HH");
-    const properData = `${currentDay}T${currentTime}:00`;
-
-    data.daily.time.forEach((time, i) => {
-      if (time === currentDay) {
-        console.log(time, data.hourly.temperature_2m[i]);
-        sunrise.textContent = `Sunrise: ${data.daily.sunrise[i].slice(11)}`;
-        sunset.textContent = `Sunset: ${data.daily.sunset[i].slice(11)}`;
-      }
-    });
-
-    temperature.textContent = `${data.current_weather.temperature} ${data.hourly_units.temperature_2m}`;
+    sunrise.textContent = `Sunrise: ${new Date(
+      data.sys.sunrise * 1000
+    ).toLocaleTimeString("default")}`;
+    sunset.textContent = `Sunset: ${new Date(
+      data.sys.sunset * 1000
+    ).toLocaleTimeString("default")}`;
+    weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    weatherPressure.textContent = `${data.main.pressure} hPa`;
+    weatherHumidity.textContent = `${data.main.humidity} %`;
+    console.log(data.main);
   } catch (err) {
     console.error(err);
   }
 };
 
-// const getWeather = async () => {
-//   try {
-//     const res = await fetch(
-//       "https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=c58fa2ecfa8637a64dfc55ee7e8f5150"
-//     );
-//     const data = await res.json();
-//     console.log(data);
-//   } catch (err) {
-//     console.error(err);
-//   }
-// };
-
-const createWeatherIMG = () => {
-  const weatherIMG = document.createElementNS(
-    "../assets/svg/wi-day-sunny-0.svg",
-    "svg"
-  );
-  weatherIMG.setAttribute("href", "../assets/svg/wi-day-sunny-0.svg");
-  // weatherIMG.src = "../assets/svg/wi-day-sunny-0.svg";
-  weatherBox.appendChild(weatherIMG);
+const showWeather = () => {
+  let latitude;
+  let longitude;
+  if (navigator.geolocation)
+    navigator.geolocation.getCurrentPosition(
+      function (position) {
+        latitude = position.coords.latitude.toFixed(2);
+        longitude = position.coords.longitude.toFixed(2);
+        console.log(latitude, longitude);
+        getWeatherData(latitude, longitude);
+      },
+      function () {
+        alert("could not get your position");
+      }
+    );
 };
-
-createWeatherIMG();
-getWeather();
-
-if (navigator.geolocation)
-  navigator.geolocation.getCurrentPosition(
-    function (position) {
-      const { latitude } = position.coords;
-      const { longitude } = position.coords;
-      const coords = [latitude, longitude];
-      console.log(coords);
-    },
-    function () {
-      alert("could not get your position");
-    }
-  );
-
-// 0ac8d24292bec7ba2bf644e405cffefb
-// https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
-
-// WMO Weather interpretation codes (WW)
-// Code	Description
-// 0	Clear sky
-// 1, 2, 3	Mainly clear, partly cloudy, and overcast
-// 45, 48	Fog and depositing rime fog
-// 51, 53, 55	Drizzle: Light, moderate, and dense intensity
-// 56, 57	Freezing Drizzle: Light and dense intensity
-// 61, 63, 65	Rain: Slight, moderate and heavy intensity
-// 66, 67	Freezing Rain: Light and heavy intensity
-// 71, 73, 75	Snow fall: Slight, moderate, and heavy intensity
-// 77	Snow grains
-// 80, 81, 82	Rain showers: Slight, moderate, and violent
-// 85, 86	Snow showers slight and heavy
-// 95 *	Thunderstorm: Slight or moderate
-// 96, 99 *	Thunderstorm with slight and heavy hail
+showWeather();

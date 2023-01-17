@@ -510,7 +510,7 @@ body {
 
 .today {
   text-align: center;
-  background-color: #444;
+  background-color: #4446;
   border-radius: 6px;
 }
 
@@ -538,15 +538,15 @@ body {
 
 .weather__img {
   height: 20rem;
-  margin-top: 5.2rem;
 }
 
 .weather__temp {
-  margin: 0;
+  margin: -3.2px 0 0;
   font-size: 2.8rem;
 }
 
 .weather__sun {
+  margin-top: -2rem;
   display: flex;
 }
 
@@ -562,10 +562,31 @@ body {
 
 .sunset__img, .sunrise__img {
   height: 10rem;
+  margin-bottom: -1.5rem;
 }
 
 .sunset__text, .sunrise__text {
   margin: 0;
+}
+
+.weather__pressure, .weather__humidity {
+  margin: .2rem;
+  font-size: 1.8rem;
+}
+
+.weather__details {
+  justify-content: center;
+  align-items: center;
+  margin-left: -4rem;
+  display: flex;
+}
+
+.icon {
+  height: 4rem;
+}
+
+.barometer {
+  height: 4.6rem;
 }
 
 /*# sourceMappingURL=app.49742217.css.map */
